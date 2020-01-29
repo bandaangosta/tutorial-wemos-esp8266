@@ -3,6 +3,13 @@
 We'll be using the Wemos D1 mini, a [cheap](https://www.aliexpress.com/item/32831353752.html?spm=a2g0s.9042311.0.0.77ba4c4dUDc5of) wifi-enabled board with 4MB flash based on the awesome [ESP-8266EX microcontroller](https://www.espressif.com/en/products/hardware/esp8266ex/overview).
 ![D1 mini](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/img/products:d1:d1_mini_v3.1.0_1_16x9.jpg)
 
+## Materials
+ * [Wemos D1 mini development board](https://www.aliexpress.com/item/32831353752.html?spm=a2g0s.9042311.0.0.77ba4c4dUDc5of)
+ * Computer
+ * USB-to-microUSB cable
+ * Jumpers
+ * 5V relay, for later exercise
+ 
 ## Features
 
 * 11 digital input/output pins
@@ -47,7 +54,7 @@ Make sure to used a fully wired USB cable. If board is not visible in your devic
 ### Basic testing
 
 The MicroPython firmware comes with the handy REPL (Read Evaluate Print Loop) tool. The "Python prompt", if you will. By far the easiest way to test commands and explore the many possibilities of the microcontroller.
-We will need a simple serial port terminal. In this examples, we will use `picocom`.
+We will need a simple serial port terminal. In these examples, we will use `picocom`.
 
     $ picocom -b 115200 /dev/ttyUSB0
 
@@ -79,3 +86,12 @@ Powering on/off the built-in LED (internally connected to pin GPIO2):
 
 
 It works!
+
+### Loading application files
+
+### Experiments
+## LED blinking
+File:
+## Relay toggle
+File:
+## Remote relay activation
