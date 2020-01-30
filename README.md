@@ -119,7 +119,7 @@ Turn on and off board built-in LED in a 1 second cycle:
 
 ### Relay toggle
 For relay experiments we will be using the [Wemos D1 mini relay shield](https://www.aliexpress.com/item/32863745140.html?spm=a2g0s.9042311.0.0.77ba4c4dUDc5of):
-![D1 mini](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/images/products:d1:d1_mini_v3.1.0_1_16x9.jpg)
+![D1 mini](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/images/relay.jpg)
 
 The relay board uses pin D1 (GPIO 5) for relay control. Therefore, we need to connect D1, 5V and GND lines from Wemos D1 Mini board to relay board.
 The following example is very similar to the LED toggle test above, but now controlling the D1 pin: [relay_toggle.py](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/examples/relay_toggle.py)
