@@ -89,6 +89,25 @@ It works!
 
 ### Loading application files
 
+Source Python files can be loaded using the `ampy` tool, which can be installed like so:
+
+    $ pip install adafruit-ampy
+
+Main commands available are:
+
+    Listing files on board filesystem:
+    
+    $  ampy --port /dev/ttyUSB0 ls
+
+
+    $  ampy --port /dev/ttyUSB0 get main.py
+    $  ampy --port /dev/ttyUSB0 put main.py
+    $  ampy --port /dev/ttyUSB0 put led_toggle.py main.py
+    
+
+
+
+
 ### Experiments
 ## LED blinking
 File:
