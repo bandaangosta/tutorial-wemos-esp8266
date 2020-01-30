@@ -1,7 +1,7 @@
 # Wemos D1 mini development board tutorial
 
 We'll be using the Wemos D1 mini, a [cheap](https://www.aliexpress.com/item/32831353752.html?spm=a2g0s.9042311.0.0.77ba4c4dUDc5of) wifi-enabled board with 4MB flash based on the awesome [ESP-8266EX microcontroller](https://www.espressif.com/en/products/hardware/esp8266ex/overview).
-![D1 mini](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/img/products:d1:d1_mini_v3.1.0_1_16x9.jpg)
+![D1 mini](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/images/products:d1:d1_mini_v3.1.0_1_16x9.jpg)
 
 ## Materials
  * [Wemos D1 mini development board](https://www.aliexpress.com/item/32831353752.html?spm=a2g0s.9042311.0.0.77ba4c4dUDc5of)
@@ -92,25 +92,39 @@ It works!
 Source Python files can be loaded using the `ampy` tool, which can be installed like so:
 
     $ pip install adafruit-ampy
-
-Main commands available are:
-
-    Listing files on board filesystem:
+    
+On board boot, file ´boot.py´ is first run. This file is automatically created during first-time module set up and contains some initialization routines. Generally, it does not need to be modified. After boot.py is completed, file main.py is run, if found. That is where we can to put our code.
+ 
+Listing files on board filesystem:    
     
     $  ampy --port /dev/ttyUSB0 ls
 
-
+Show contents of existing file main.py:  
+    
     $  ampy --port /dev/ttyUSB0 get main.py
+
+Upload main.py to board:
+    
     $  ampy --port /dev/ttyUSB0 put main.py
+
+Upload led_toggle.py to board, renaming it to main.py:
+    
     $  ampy --port /dev/ttyUSB0 put led_toggle.py main.py
     
-
-
-
-
 ### Experiments
 ## LED blinking
-File:
+Turn on and off board built-in LED in a 1 second cycle:
+[led_toggle.py](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/examples/led_toggle.py)
+
 ## Relay toggle
+For relay experiments we will be using the [Wemos D1 mini relay shield](https://www.aliexpress.com/item/32863745140.html?spm=a2g0s.9042311.0.0.77ba4c4dUDc5of):
+![D1 mini](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/images/products:d1:d1_mini_v3.1.0_1_16x9.jpg)
+
+The relay board uses pin D1 (GPIO 5) for relay control. Therefore, we need to connect D1, 5V and GND lines from Wemos D1 Mini board to relay board.
+The following example is very similar to the LED toggle test above, but now controlling the D1 pin: [relay_toggle.py](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/examples/relay_toggle.py)
+[led_toggle.py](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/examples/led_toggle.py)
+
+
 File:
+
 ## Remote relay activation
