@@ -94,7 +94,7 @@ Source Python files can be loaded using the `ampy` tool, which can be installed 
 
     $ pip install adafruit-ampy
     
-On board boot, file ´boot.py´ is first run. This file is automatically created during first-time module set up and contains some initialization routines. Generally, it does not need to be modified. After boot.py is completed, file main.py is run, if found. That is where we can to put our code.
+On board boot, file `boot.py` is run first. This file is automatically created during first-time module set up and contains some initialization routines. Generally, it does not need to be modified. After boot.py is completed, file main.py is run, if found. This is where we can put our code.
  
 Listing files on board filesystem:    
     
@@ -108,9 +108,9 @@ Upload main.py to board:
     
     $  ampy --port /dev/ttyUSB0 put main.py
 
-Upload led_toggle.py to board, renaming it to main.py:
+Upload myapp.py to board, renaming it to main.py:
     
-    $  ampy --port /dev/ttyUSB0 put led_toggle.py main.py
+    $  ampy --port /dev/ttyUSB0 put myapp.py main.py
     
 ## Experiments
 ### LED blinking
