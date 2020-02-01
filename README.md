@@ -1,7 +1,7 @@
 # Wemos D1 mini development board tutorial
 *Notes for IoT sessions by JLO in ALMA - Summer 2020*
 
-[Remote relay activation](https://youtu.be/wWWjBbW_QvQ)
+[![](http://img.youtube.com/vi/wWWjBbW_QvQ/0.jpg)](http://www.youtube.com/watch?v=wWWjBbW_QvQ "Remote relay activation")
 
 We'll be using the Wemos D1 mini, a [cheap](https://www.aliexpress.com/item/32831353752.html?spm=a2g0s.9042311.0.0.77ba4c4dUDc5of) wifi-enabled board with 4MB flash based on the awesome [ESP-8266EX microcontroller](https://www.espressif.com/en/products/hardware/esp8266ex/overview).
 ![D1 mini](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/images/products:d1:d1_mini_v3.1.0_1_16x9.jpg)
@@ -139,6 +139,6 @@ You should end up with a dashboard like the this:
 Now load the following code on your board and profit: [relay_toggle_mqtt.py](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/examples/relay_toggle_mqtt.py)
 
 Result:
-[Remote relay activation](https://youtu.be/wWWjBbW_QvQ)
+[![](http://img.youtube.com/vi/wWWjBbW_QvQ/0.jpg)](http://www.youtube.com/watch?v=wWWjBbW_QvQ "Remote relay activation")
 
 
