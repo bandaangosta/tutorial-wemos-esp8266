@@ -1,6 +1,8 @@
 # Wemos D1 mini development board tutorial
 *Notes for IoT sessions by JLO in ALMA - Summer 2020*
 
+[Remote relay activation](https://youtu.be/wWWjBbW_QvQ)
+
 We'll be using the Wemos D1 mini, a [cheap](https://www.aliexpress.com/item/32831353752.html?spm=a2g0s.9042311.0.0.77ba4c4dUDc5of) wifi-enabled board with 4MB flash based on the awesome [ESP-8266EX microcontroller](https://www.espressif.com/en/products/hardware/esp8266ex/overview).
 ![D1 mini](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/images/products:d1:d1_mini_v3.1.0_1_16x9.jpg)
 
@@ -125,4 +127,18 @@ The relay board uses pin D1 (GPIO 5) for relay control. Therefore, we need to co
 The following example is very similar to the LED toggle test above, but now controlling the D1 pin: [relay_toggle.py](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/examples/relay_toggle.py)
 
 ### Remote relay activation
-This will be covered in the next session of this tutorial.
+There are several ways to establish a remote connection to a "home" device. By remote connection here we mean reading variables (e.g., sensor values) and/or controlling actuators (e.g., a relay switching to a lamp or water valve) from a remote device in a different part of the world, through the Internet. Neat stuff.   
+
+The following example accomplishes this purpose using the popular [Message Queue Telemetry Transport ](http://mqtt.org/)(MQTT) protocol. In the center of the MQTT communications there is a broker machine, a server that passes messages between data publishers and subscribers of "topics".   
+
+We could setup our own broker service on a cloud server or a home machine connected to the internet, but we'll take a shortcut for now and use the fantastic service provided by [adafruit](https://io.adafruit.com) for us gadget lovers. Once you get an account, create a new feed or topic called `relay_toggle`. Then, create a new dashboard with a block of type `toggle`. Associate that block or "button" to the `relay_toggle` feed. Take notes of your AIO key.
+
+You should end up with a dashboard like the this:
+![D1 mini](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/images/dashboard_toggle.jpg)
+
+Now load the following code on your board and profit: [relay_toggle_mqtt.py](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/examples/relay_toggle_mqtt.py)
+
+Result:
+[Remote relay activation](https://youtu.be/wWWjBbW_QvQ)
+
+
