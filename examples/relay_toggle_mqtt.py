@@ -37,10 +37,10 @@ def sub_cb(topic, msg):
     print((topic, msg))
 
     if msg == b'ON':
-        print('Turning LED on...')
+        print('Activating relay...')
         relay.on()
     else:
-        print('Turning LED off...')
+        print('Disactivating relay...')
         relay.off()
 
 def check_for_msg(client, blocking=False):
@@ -70,7 +70,7 @@ def main():
     while True:
         try:
             check_for_msg(client, True)
-            # Add a sleep to avoid close to 100% CPU usage (in a more real
+            # Add a small sleep to avoid close to 100% CPU usage (in a more real
             # application other useful actions would be performed instead)
             time.sleep(0.1)
         except KeyboardInterrupt:
