@@ -6,7 +6,7 @@ Our final goal for this tutorial is to learn how to remotely activate a relay. T
 Tutorial goal: https://youtu.be/m54RHyuKHuQ   
 [![](http://img.youtube.com/vi/m54RHyuKHuQ/0.jpg)](http://www.youtube.com/watch?v=m54RHyuKHuQ "Remote relay activation")
 
-We'll be using the Wemos D1 mini, a [cheap](https://www.aliexpress.com/item/32831353752.html?spm=a2g0s.9042311.0.0.77ba4c4dUDc5of) wifi-enabled board with 4MB flash based on the awesome [ESP-8266EX microcontroller](https://www.espressif.com/en/products/hardware/esp8266ex/overview).
+We'll be using the [Wemos D1 mini](https://wiki.wemos.cc/products:d1:d1_mini), a [cheap](https://www.aliexpress.com/item/32831353752.html?spm=a2g0s.9042311.0.0.77ba4c4dUDc5of) wifi-enabled board with 4MB flash based on the awesome [ESP-8266EX microcontroller](https://www.espressif.com/en/products/hardware/esp8266ex/overview).
 ![D1 mini](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/images/products:d1:d1_mini_v3.1.0_1_16x9.jpg)
 
 ## Materials
@@ -19,17 +19,17 @@ We'll be using the Wemos D1 mini, a [cheap](https://www.aliexpress.com/item/3283
 
 * 11 digital input/output pins
 * All pins have interrupt/pwm/I2C/one-wire supported(except D0)
-* 1 analog input(3.2V max input)
+* 1 analog input (3.2V max input)
 * Operating Voltage 3.3V
 * Clock Speed   80MHz (max.160MHz)
 * Flash 4 MB
-* 1 Micro USB connection
+* 1 micro USB connection
 * Compatible with MicroPython, Arduino, nodemcu, etc.
 
 Find full details list [here](https://wiki.wemos.cc/products:d1:d1_mini).
 
 ## SDK
-From the many available alternatives, we will be using the [MycroPython SDK](https://micropython.org/) for our projects.
+From the many available alternatives, we will be using the [MicroPython SDK](https://micropython.org/) for our projects.
 
 ## Setup
 ### Getting latest firmware
@@ -42,10 +42,12 @@ Install ESP8266 serial bootloader utility [esptool](https://github.com/espressif
 Typically, it should be as simple as running in a terminal:
 
     $ pip install esptool
+    
+Commands are shown in Linux style, although they are very similar for Mac OS and Windows users.
 
 ### Erasing/flashing the firmware
 
-Connect your Wemos board to a USB port of your computer. We will assume it appears as device /dev/ttyUSB0.
+Connect your Wemos board to a USB port of your computer. We will assume it appears as device `/dev/ttyUSB0`.
 Make sure to used a fully wired USB cable. If board is not visible in your devices list, it may be possible you are using a power-only USB cable (for charging).
 
 #### Erase flash
