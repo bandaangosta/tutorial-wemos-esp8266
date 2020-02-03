@@ -138,7 +138,7 @@ We could setup our own broker service on a cloud server or a home machine connec
 You should end up with a dashboard like the this:   
 [<img src="images/dashboard_toggle.png" width="350"/>](images/dashboard_toggle.png)
 
-Now load the following code on your board and profit: [relay_toggle_mqtt.py](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/examples/relay_toggle_mqtt.py)
+Now review the following code, complete missing values, load it on your board and enjoy. : [relay_toggle_mqtt.py](https://github.com/bandaangosta/tutorial-wemos-esp8266/blob/master/examples/relay_toggle_mqtt.py)
 
 Result:   
 https://youtu.be/m54RHyuKHuQ   
